@@ -3,7 +3,7 @@
     "type": "library",
     "description": "UCS HTML Generator Component",
     "keywords": ["UCS","Component","HTML","Generator"],
-    "homepage": "http://ucs.nmacherey.com/components/news",
+    "homepage": "http://ucs.nmacherey.com/components/html-generator",
     "license": "MIT",
     "authors": [
         {
