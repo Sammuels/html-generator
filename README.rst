@@ -21,7 +21,7 @@ Basic Usage
 .. code-block:: php
 
     <?php
-
+    // Create the markup object before generation
     $markup = new Markup();
     $markup->setContent('My brand new HTML from RST');
 
@@ -35,3 +35,18 @@ Basic Usage
 
     $html = $factory->generate('rst2html', $markup);
     ?>
+
+Available Generators
+--------------------
+
+HtmlToHtmlGenerator
++++++++++++++++++++
+
+The HtmlToHtml generator doe mostly... nothing it returns the content, it is only avaialble
+as a default behaviour.
+
+Rst2HtmlGenerator
++++++++++++++++++
+
+Rst2HtmlGenerator uses the python rst2html tool to generate proper HTML from a full restructured
+text. Please check its documentation for further informations.
