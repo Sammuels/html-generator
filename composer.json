@@ -1,0 +1,24 @@
+{
+    "name": "ucs/html-generator",
+    "type": "library",
+    "description": "UCS HTML Generator Component",
+    "keywords": ["UCS","Component","HTML","Generator"],
+    "homepage": "http://ucs.nmacherey.com/components/news",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Macherey",
+            "email": "nicolas.macherey@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.2",
+        "doctrine/collections": "1.2.*",
+        "symfony/process": "2.3.*"
+    },
+    "autoload": {
+        "psr-0": { "UCS\\Component\\HtmlGenerator": "" }
+    },
+    "target-dir": "UCS/Component/HtmlGenerator"
+}
