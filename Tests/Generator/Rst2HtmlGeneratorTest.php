@@ -46,6 +46,11 @@ class Rst2HtmlGeneratorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals("\n\n<p>HTML</p>", $html);
     }
 
+    public function testGenerateString() {
+        $html = $this->instance->generate('HTML');
+        $this->assertEquals("\n\n<p>HTML</p>", $html);
+    }
+
     /**
      * @expectedException \RuntimeException
      */

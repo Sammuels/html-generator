@@ -42,7 +42,14 @@ class HtmlToHtmlGenerator implements GeneratorInterface
      *
      * TODO: Check if we can purify the html... no script tags and so on...
      */
-    public function generate(MarkupInterface $markup, $options = array()) {
-        return $markup->getContent();
+    public function generate($markup, $options = array()) {
+
+        if( $markup instanceof MarkupInterface ) {
+            $content = $markup->getContent();
+        } else {
+            $content = $markup;
+        }
+
+        return $content;
     }
 }

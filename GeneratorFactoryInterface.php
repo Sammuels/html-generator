@@ -68,7 +68,7 @@ interface GeneratorFactoryInterface extends \IteratorAggregate, \Countable
      * Generate code
      *
      * @param string $genertor generator to use
-     * @param MarkupInterface $markup the content to generate HTML for
+     * @param MarkupInterface|string $markup the content to generate HTML for
      * @param array $params optional parameters that can be given to the generator
      *
      * @return string the HTML code generated
@@ -76,5 +76,5 @@ interface GeneratorFactoryInterface extends \IteratorAggregate, \Countable
      * @throws NoGeneratorFoundException if no generator was found for the 
      * given markup
      */
-    public function generate($generator, MarkupInterface $markup, $options = array());
+    public function generate($generator, $markup, $options = array());
 }

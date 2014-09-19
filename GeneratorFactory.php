@@ -113,7 +113,7 @@ class GeneratorFactory implements GeneratorFactoryInterface
     /**
      * {@inheritdoc}
      */
-    public function generate($name, MarkupInterface $markup, $options = array()) {
+    public function generate($name, $markup, $options = array()) {
 
         if( !isset($this->generators[$name])) {
             throw new NoGeneratorFoundException("The generator $name for the given markup was not found...");

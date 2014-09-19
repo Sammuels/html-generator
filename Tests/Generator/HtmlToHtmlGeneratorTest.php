@@ -43,4 +43,9 @@ class HtmlToHtmlGeneratorTest extends \PHPUnit_Framework_TestCase
         $html = $this->instance->generate($markup);
         $this->assertEquals('HTML', $html);
     }
+
+    public function testGenerateString() {
+        $html = $this->instance->generate('HTML');
+        $this->assertEquals('HTML', $html);
+    }
 }

@@ -36,10 +36,10 @@ interface GeneratorInterface
     /**
      * Generate code
      *
-     * @param MarkupInterface $markup the content to generate HTML for
+     * @param MarkupInterface|string $markup the content to generate HTML for
      * @param array $params optional parameters that can be given to the generator
      *
      * @return string the HTML code generated
      */
-    public function generate(MarkupInterface $markup, $options = array());
+    public function generate($markup, $options = array());
 }

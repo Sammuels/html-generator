@@ -99,13 +99,19 @@ class Rst2HtmlGenerator implements GeneratorInterface
      *
      * TODO: Do a better implementation look at sphinx...
      */
-    public function generate(MarkupInterface $markup, $options = array()) {
+    public function generate($markup, $options = array()) {
         // 1 - write the content to the temp file
         $tempPath = $this->tempDirectory . '/' . uniqid();
         $tempPathOut = $tempPath . '-output';
 
+        if( $markup instanceof MarkupInterface ) {
+            $content = $markup->getContent();
+        } else {
+            $content = $markup;
+        }
+
         // Store the content to the proper file
-        file_put_contents($tempPath, $markup->getContent());
+        file_put_contents($tempPath, $content);
 
         // Start building the command line
         $arguments = array('rst2html');
